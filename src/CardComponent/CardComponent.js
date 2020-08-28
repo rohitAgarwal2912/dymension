@@ -19,8 +19,8 @@ useEffect(() => {
 }, []); 
 
   const newsFeedApiCall = (param) => {
-      let category = param? param :'bitcoin';
-    fetch(`http://newsapi.org/v2/everything?q=bitcoin&from=2020-07-28&sortBy=publishedAt&apiKey=5d23993df62546cfb7aa62403f873cf3`)
+      let category = param ? param :'bitcoin';
+    fetch(`http://newsapi.org/v2/everything?q=${param}&from=2020-07-28&sortBy=publishedAt&apiKey=5d23993df62546cfb7aa62403f873cf3`)
     .then(results => results.json())
     .then(data => {
         console.log('data', data.articles)
